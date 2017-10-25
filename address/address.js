@@ -1,4 +1,5 @@
 'use strict';
+
 const assert = require('assert');
 const bs58 = require('bs58');
 const hash = require('../utilities/hash');
