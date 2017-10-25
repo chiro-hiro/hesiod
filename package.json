@@ -1,7 +1,7 @@
 {
   "name": "hesiod",
   "version": "0.0.1",
-  "description": "Hesiod project, blockchain on NodeJS",
+  "description": "Hesiod project, build up blockchain on NodeJS",
   "main": "index.js",
   "dependencies": {
     "adler32": "^0.1.7",
