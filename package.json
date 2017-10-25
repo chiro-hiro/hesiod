@@ -1,0 +1,33 @@
+{
+  "name": "hesiod",
+  "version": "0.0.1",
+  "description": "Hesiod project, blockchain on NodeJS",
+  "main": "index.js",
+  "dependencies": {
+    "adler32": "^0.1.7",
+    "bip39": "^2.4.0",
+    "bs58": "^4.0.1",
+    "ripemd160": "^2.0.1",
+    "secp256k1": "^3.3.0",
+    "xorcrypto": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tad88dev/hesiod.git"
+  },
+  "keywords": [
+    "blockchain",
+    "hesiod",
+    "technology"
+  ],
+  "author": "tad88.dev@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tad88dev/hesiod/issues"
+  },
+  "homepage": "https://github.com/tad88dev/hesiod#readme"
+}
