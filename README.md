@@ -1,2 +1,2 @@
-# hesiod
-Hesiod project, build up fabric blockchain on NodeJS
+# Hesiod
+Hesiod project, build up blockchain on NodeJS
