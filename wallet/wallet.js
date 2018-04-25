@@ -6,11 +6,12 @@ const crypto = require('crypto');
 const address = require('../address/address');
 
 function wallet() {
-    return this;
+    return this.generate();
 }
 
 wallet.prototype.generate = function () {
-    this._masterSeed = bip39.mnemonicToSeed(bip39.generateMnemonic());
+    this._passPhrase = bip39.generateMnemonic();
+    this._masterSeed = bip39.mnemonicToSeed(this._passPhrase);
     this._privateKey = crypto.createHash('sha256').update(this._masterSeed).digest()
     this._publicKey = secp256k1.publicKeyCreate(this._privateKey);
     this._address = address.encodeAddress(this._publicKey);
@@ -19,6 +20,7 @@ wallet.prototype.generate = function () {
 
 wallet.prototype.fromPassphrase = function (passphrase) {
     if (bip39.validateMnemonic(passphrase)) {
+        this._passPhrase = passphrase;
         this._masterSeed = bip39.mnemonicToSeed(passphrase);
         this._privateKey = crypto.createHash('sha256').update(this._masterSeed).digest()
         this._publicKey = secp256k1.publicKeyCreate(this._privateKey);
